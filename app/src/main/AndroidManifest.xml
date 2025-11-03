@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomDatabase">
         <activity
+            android:name=".AddNoteActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>

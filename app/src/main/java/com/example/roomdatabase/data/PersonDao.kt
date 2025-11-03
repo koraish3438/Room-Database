@@ -10,15 +10,15 @@ import androidx.room.Update
 
 @Dao
 interface PersonDao {
-    @Query("SELECT * FROM person")
+    @Query("SELECT * FROM persons_table")
     fun getAllPerson(): LiveData<List<Person>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertPerson(person: Person)
+    suspend fun insert(person: Person)
 
     @Update
-    suspend fun updatePerson(person: Person)
+    suspend fun update(person: Person)
 
     @Delete
-    suspend fun deletePerson(person: Person)
+    suspend fun delete(person: Person)
 }
